@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Search Re-Ranker",
+  "version": "2.1.0",
+  "description": "Semantically re-ranks Google search results and learns from your click behaviour.",
+
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://www.google.co.in/*",
+    "https://www.google.co.uk/*",
+    "http://localhost:8000/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search*",
+        "https://www.google.co.in/search*",
+        "https://www.google.co.uk/search*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Search Re-Ranker"
+  }
+}

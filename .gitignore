@@ -1,0 +1,6 @@
+backend/model_finetuned/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
