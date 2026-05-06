@@ -34,7 +34,7 @@ User searches on Google
          │  POST /rerank
          ▼
 ┌─────────────────────┐
-│   FastAPI Backend   │  localhost:8000 · main.py
+│   FastAPI Backend   │  localhost:000 · main.py
 │                     │
 │  1. Encode query    │  ← all-MiniLM-L6-v2 (or fine-tuned model)
 │  2. Encode docs     │
